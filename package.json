@@ -1,5 +1,15 @@
 {
   "dependencies": {
-    "readline-sync": "^1.4.10"
-  }
+    "readline-sync": "^1.4.10",
+    "swap-case": "^3.0.3"
+  },
+  "name": "aslam-webdevelopment",
+  "version": "1.0.0",
+  "main": "accessing-input-from-user.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
 }
