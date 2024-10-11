@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MongoDB SignUp Form</title>
+  </head>
+  <body>
+    <!--This html form is displayied with the help of file mongodb_connectionToDB.js .in here the route is set for this file line number is 35-->
+    <h1><u>MongoDB SignUp Form</u></h1>
+    <!--after submittion the data will going to the post method of mongodb_connectionToDB.js file-->
+    <form action="/signupSubmit" method="post">
+      <div>
+        <label for="name">Name:</label>
+        <input type="text" name="name" required />
+      </div>
+      <div>
+        <label for="email">Email:</label>
+        <input type="text" name="email" required />
+      </div>
+      <div>
+        <label for="password">Password:</label>
+        <input type="password" name="password" required />
+      </div>
+      <button type="submit">Sign Up</button>
+    </form>
+  </body>
+</html>
