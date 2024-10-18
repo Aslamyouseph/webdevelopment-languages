@@ -1,0 +1,43 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CRUD Operations</title>
+  </head>
+  <body>
+    <h1><u>CRUD Operations</u></h1>
+    <br /><br />
+
+    <!--sent to the CRUD_insertionOfDataToDB.html 65 line  -->
+    <form action="/signupSubmit" method="post">
+      <!-- In MongoDB, each document (or record) has a unique identifier called _id. When updating a record, 
+      the server needs to know which specific document to update. so that why we passing an id.
+      ""In the form actually we passing ID in the input felid but it is hidden so we didn't able to see this id felid in the html form .
+      TO watch that id then remove type="hidden" the we can able to see this on the html page""-->
+      <!--In this form if the id is pass then it is indicated as a updating operation and this control will go to the else part of the app.post("/signupSubmit", async (req, res)
+      this line or 144 line of code . if the id is not pass then it indicate that it is a insertion process so it go to the if part of this line app.post("/signupSubmit", async (req, res)
+      126 line -->
+      <input type="hidden" name="id" value="{{student._id}}" />
+
+      <div>
+        <label for="name">Name:</label>
+        <input type="text" name="name" value="{{student.name}}" required />
+      </div>
+      <br /><br /><br />
+      <div>
+        <label for="email">Email:</label>
+        <input type="text" name="email" value="{{student.email}}" required />
+      </div>
+      <br /><br /><br />
+      <div>
+        <label for="password">Password:</label>
+        <input type="password" name="password" value="" required />
+        <!-- Leave password empty, the user must re-enter it -->
+      </div>
+      <br /><br /><br />
+      <button type="submit">Save Changes</button>
+      <button><a href="/CRUD_display">View details</a></button>
+    </form>
+
+  </body>
+</html>

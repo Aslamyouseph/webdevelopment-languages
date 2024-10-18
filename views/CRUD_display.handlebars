@@ -1,0 +1,34 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Display Contents of CRUD Operations</title>
+  </head>
+  <body>
+    <h2>Student Data</h2>
+    <table border="1">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Password</th>
+          <th>Operations</th>
+        </tr>
+      </thead>
+      <tbody id="studentTableBody">
+        {{#each students}}
+          <tr>
+            <td>{{this._id}}</td><!-- in this way we accessing the id -->
+            <!-- Display MongoDB _id -->
+            <td>{{this.name}}</td>
+            <td>{{this.email}}</td>
+            <td>{{this.password}}</td>
+            <td><a href="/CRUD_form/{{this._id}}">Update</a></td>
+            <td><a href="/delete/{{this._id}}">Delete</a></td>
+          </tr>
+        {{/each}}
+      </tbody>
+    </table>
+  </body>
+</html>
